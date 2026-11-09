@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import type { ToastOptions } from '../../../app/AppContext'
 import styles from './Toast.module.css'
@@ -13,6 +14,13 @@ interface ToastProps {
 }
 
 export function Toast({ toast, onDismiss }: ToastProps) {
+  // Пока старое уведомление плавно исчезает, рядом уже может быть новое.
+  // Кнопка должна срабатывать только у актуального — иначе отменится не та операция.
+  const currentId = useRef<number | null>(toast?.id ?? null)
+  useEffect(() => {
+    currentId.current = toast?.id ?? null
+  }, [toast])
+
   return (
     <div className={styles.region} role="status" aria-live="polite">
       <AnimatePresence>
@@ -22,7 +30,7 @@ export function Toast({ toast, onDismiss }: ToastProps) {
             className={`${styles.toast} ${toast.tone === 'error' ? styles.error : ''}`}
             initial={{ opacity: 0, y: 24, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 24, scale: 0.96 }}
+            exit={{ opacity: 0, y: 24, scale: 0.96, pointerEvents: 'none' }}
             transition={{ type: 'spring', stiffness: 500, damping: 36 }}
           >
             <span className={styles.message}>{toast.message}</span>
@@ -31,6 +39,7 @@ export function Toast({ toast, onDismiss }: ToastProps) {
                 type="button"
                 className={styles.action}
                 onClick={() => {
+                  if (currentId.current !== toast.id) return
                   toast.action?.onClick()
                   onDismiss()
                 }}
