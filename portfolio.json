@@ -10,5 +10,14 @@
   ],
   "code": "https://github.com/hatiksu/finance-tracker",
   "mockup": "finance",
-  "order": 1
+  "order": 1,
+  "en": {
+    "title": "AI Finance Tracker",
+    "description": "A mobile PWA for tracking income and expenses: installs on your phone, works offline, and AI helps you log spending and review the month.",
+    "highlights": [
+      "Log expenses in one line: “coffee 350”, “taxi 420 yesterday” — amount, date and category are detected automatically",
+      "AI splits complex phrases into several transactions and analyses your month",
+      "Budgets, charts and a forecast; your data never leaves the device"
+    ]
+  }
 }
