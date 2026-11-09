@@ -80,7 +80,7 @@ src/
 
 ## Установка на Windows
 
-Готовый установщик `.exe` лежит в **Releases** репозитория — релиз с тегом `finance-tracker-v…`.
+Готовый установщик — в [последнем релизе](https://github.com/hatiksu/finance-tracker/releases/latest) (все версии — в [Releases](https://github.com/hatiksu/finance-tracker/releases)).
 
 1. Скачайте `finance-tracker-Setup-<версия>.exe` и запустите.
 2. Если Windows покажет «Система Windows защитила ваш компьютер» — **Подробнее → Выполнить в любом случае**
