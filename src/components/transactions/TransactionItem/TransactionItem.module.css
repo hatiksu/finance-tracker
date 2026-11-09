@@ -1,0 +1,54 @@
+.item {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 14px;
+  background: none;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.item:active {
+  background: var(--surface-2);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.text {
+  display: grid;
+  min-width: 0;
+}
+
+.note {
+  font-weight: 600;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.income {
+  color: var(--income);
+}

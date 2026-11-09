@@ -1,0 +1,83 @@
+.total {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.totalLabel {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.totalValue {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.totalValue span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.totalPct {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.totalHint {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field input {
+  min-height: 52px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-2);
+}

@@ -1,0 +1,35 @@
+.group {
+  display: flex;
+  padding: 4px;
+  border-radius: 14px;
+  background: var(--surface-2);
+}
+
+.option {
+  position: relative;
+  flex: 1;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.active {
+  color: var(--text);
+}
+
+.thumb {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.text {
+  position: relative;
+}

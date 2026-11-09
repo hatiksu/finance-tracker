@@ -1,0 +1,103 @@
+.root {
+  display: grid;
+  gap: 18px;
+}
+
+.chart {
+  position: relative;
+  width: min(240px, 72vw);
+  margin: 0 auto;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.arc {
+  cursor: pointer;
+}
+
+.center {
+  position: absolute;
+  inset: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.centerEmoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.centerValue {
+  font-size: clamp(18px, 5.4vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.centerLabel {
+  max-width: 100%;
+  font-size: 12px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legend {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 12px 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 12px;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+.row:active,
+.rowActive {
+  background: var(--surface-2);
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.share {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.amount {
+  min-width: 84px;
+  text-align: right;
+  font-weight: 600;
+}

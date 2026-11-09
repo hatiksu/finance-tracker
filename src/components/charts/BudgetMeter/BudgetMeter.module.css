@@ -1,0 +1,89 @@
+.meter {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  text-align: left;
+  transition: border-color 0.2s;
+}
+
+.meter:active {
+  border-color: var(--accent);
+}
+
+.top,
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 0;
+}
+
+.emoji {
+  font-size: 18px;
+}
+
+.values {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.limit {
+  color: var(--muted);
+}
+
+.track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* Текст статуса — в цвете текста; цвет несут только иконка и шкала */
+.warning svg {
+  color: var(--status-warning);
+}
+
+.over {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.over svg {
+  color: var(--status-critical);
+}
+
+.percent {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.noLimit {
+  font-size: 13px;
+  color: var(--muted);
+}

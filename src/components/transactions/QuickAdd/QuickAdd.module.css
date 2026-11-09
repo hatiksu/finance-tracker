@@ -1,0 +1,86 @@
+.quick {
+  display: grid;
+  gap: 6px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px 6px 16px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  border: 0;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ai,
+.send {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 13px;
+}
+
+.ai {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.send {
+  background: var(--accent);
+  color: #fff;
+}
+
+.ai:disabled,
+.send:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.busy {
+  opacity: 1 !important;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(0.88);
+    opacity: 0.6;
+  }
+}
+
+.preview {
+  margin: 0;
+  padding: 0 14px;
+  font-size: 13px;
+  color: var(--text-2);
+  overflow: hidden;
+}
+
+.hint {
+  color: var(--muted);
+}

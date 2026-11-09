@@ -1,0 +1,70 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.hero {
+  grid-column: 1 / -1;
+  position: relative;
+  display: grid;
+  gap: 2px;
+  padding: 20px;
+  border-radius: var(--radius);
+  color: #fff;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.45), transparent 55%),
+    linear-gradient(135deg, #6d4dff, #4626d9);
+  box-shadow: 0 18px 40px -18px #6d4dff;
+}
+
+.hero .label {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.heroValue {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 9vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.tile {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.value {
+  font-size: clamp(16px, 4.6vw, 20px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.dotIncome,
+.dotExpense {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dotIncome {
+  background: var(--income);
+}
+
+.dotExpense {
+  background: var(--series-2);
+}

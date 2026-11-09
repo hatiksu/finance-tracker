@@ -1,0 +1,38 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--text-2);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.arrow:not(:disabled):active {
+  background: var(--surface-2);
+}
+
+.label {
+  min-width: 128px;
+  padding: 0 6px;
+  border: 0;
+  background: none;
+  font-weight: 600;
+  font-size: 15px;
+}

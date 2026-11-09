@@ -1,0 +1,32 @@
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 28px 12px;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.text {
+  margin: 0;
+  max-width: 320px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}

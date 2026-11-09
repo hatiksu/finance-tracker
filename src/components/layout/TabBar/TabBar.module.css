@@ -1,0 +1,67 @@
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  padding-bottom: var(--safe-bottom);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  max-width: 560px;
+  height: var(--tabbar-h);
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  height: 52px;
+  justify-content: center;
+  border: 0;
+  border-radius: 14px;
+  background: none;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.active {
+  color: var(--accent);
+}
+
+.indicator {
+  position: absolute;
+  inset: 2px 6px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  z-index: -1;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.add {
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-top: -22px;
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #5b3bff);
+  box-shadow: 0 12px 28px -8px var(--accent);
+}

@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.search:focus-within {
+  border-color: var(--accent);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 46px;
+  border: 0;
+  background: none;
+  outline: none;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.summary {
+  margin: 0;
+  padding: 0 4px;
+  font-size: 13px;
+  color: var(--text-2);
+}

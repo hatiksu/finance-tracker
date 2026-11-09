@@ -1,0 +1,51 @@
+.root {
+  display: grid;
+  gap: 10px;
+}
+
+.readout {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  min-height: 26px;
+}
+
+.readout strong {
+  font-size: 18px;
+}
+
+.readoutLabel {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.avg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.avgLine {
+  width: 16px;
+  border-top: 1.5px dashed var(--text-2);
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.axis {
+  font-size: 10px;
+  fill: var(--muted);
+}
+
+.hit {
+  cursor: pointer;
+}
