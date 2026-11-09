@@ -91,8 +91,8 @@ src/
 собранный `dist` через свою схему `app://` (ведёт себя как https, поэтому работают модули, Web Workers и IndexedDB),
 внешние ссылки уходят в браузер. Service Worker в этой сборке отключён (`DESKTOP=1`).
 
-**Как выпустить новую версию:** поднимите `version` в `package.json` и запушьте тег `finance-tracker-v<версия>` —
-`.github/workflows/release.yml` соберёт установщик на Windows и опубликует релиз. Собрать вручную на Windows:
+**Как выпустить новую версию:** поднимите `version` в `package.json` и запушьте в ветку —
+`.github/workflows/release.yml` увидит, что релиза `finance-tracker-v<версия>` ещё нет, соберёт установщик на Windows и опубликует релиз. Собрать вручную на Windows:
 `DESKTOP=1 npm run build && npm run dist:win` (результат — в `release/`).
 
 ## Деплой
